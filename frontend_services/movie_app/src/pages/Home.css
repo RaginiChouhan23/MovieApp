@@ -1,0 +1,14 @@
+.home {
+  padding: 30px 40px;
+}
+
+.home h1 {
+  margin-bottom: 25px;
+  color: #222;
+}
+
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 25px;
+}

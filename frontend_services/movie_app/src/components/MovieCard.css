@@ -1,0 +1,36 @@
+.movie-card {
+  width: 220px;
+  background-color: #1c1c1c;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.movie-poster {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  display: block;
+}
+
+.movie-info {
+  padding: 12px;
+}
+
+.movie-info h2 {
+  color: white;
+  font-size: 18px;
+  margin: 0 0 8px;
+}
+
+.movie-info p {
+  color: #f5c518;
+  margin: 0 0 12px;
+}
+
+.movie-info button {
+  width: 100%;
+  padding: 9px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
