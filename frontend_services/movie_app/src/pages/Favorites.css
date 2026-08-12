@@ -1,0 +1,14 @@
+.favorites-page {
+  padding: 30px 50px;
+}
+
+.favorites-page h1 {
+  margin-bottom: 25px;
+  color: white;
+}
+
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 25px;
+}

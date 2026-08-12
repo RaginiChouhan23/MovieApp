@@ -15,7 +15,19 @@ export async function getTrendingMovies() {
 
   return data.results;
 }
+export async function getMovieDetails(id) {
+  const response = await fetch(
+    `${BASE_URL}/movie/${id}?api_key=${API_KEY}`
+  );
 
+  if (!response.ok) {
+    throw new Error("Failed to fetch movie details");
+  }
+
+  const data = await response.json();
+
+  return data;
+}
 
 // Search Movies
 export async function searchMovies(query) {

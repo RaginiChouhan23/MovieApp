@@ -1,25 +1,46 @@
 import "./MovieCard.css";
 import { Link } from "react-router-dom";
-function MovieCard({ movie }) {
+
+function MovieCard({ movie, isFavoritePage = false, onRemove }) {
+
+  function handleRemove(e) {
+    e.preventDefault();
+    e.stopPropagation();
+
+    onRemove(movie.id);
+  }
+
   return (
-    <div className="movie-card">
-     <Link to = {`/movie/${movie.id}`}>
+    <Link to={`/movie/${movie.id}`} className="movie-card">
+
       <img
         className="movie-poster"
         src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
         alt={movie.title}
       />
-      </Link>
 
       <div className="movie-info">
+
         <h2>{movie.title}</h2>
 
         <p>⭐ {movie.vote_average}</p>
 
-        <button>Add to Favorites</button>
+        {isFavoritePage ? (
+          <button
+            onClick={handleRemove}
+            className="remove-favorite-btn"
+          >
+            ❌ Remove
+          </button>
+        ) : (
+          <button>
+            Add to Favorites
+          </button>
+        )}
+
       </div>
 
-    </div>
+    </Link>
   );
 }
 
