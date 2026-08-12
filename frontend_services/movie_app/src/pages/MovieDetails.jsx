@@ -96,20 +96,31 @@ const MovieDetails = () => {
 
         <h1>{movie.title}</h1>
 
-        <p className="rating">
-          ⭐ {movie.vote_average}
-        </p>
+       <div className="movie-meta">
 
-        <p>
-          <strong>Release Date:</strong>{" "}
-          {movie.release_date}
-        </p>
+  <span>⭐ {movie.vote_average}</span>
+
+  <span>📅 {movie.release_date}</span>
+
+  <span>
+    ⏱️ {Math.floor(movie.runtime / 60)}h{" "}
+    {movie.runtime % 60}m
+  </span>
+
+</div>
+
+<p className="genres">
+  <strong>Genres:</strong>{" "}
+  {movie.genres.map((genre) => genre.name).join(" • ")}
+</p>
 
         <h2>Overview</h2>
 
         <p className="overview">
           {movie.overview}
         </p>
+
+
 
         <button
           className="favorite-btn"

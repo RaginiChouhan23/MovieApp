@@ -10,7 +10,9 @@ function Navbar({ onSearch }) {
 
       <div className="navbar-left">
 
-        <h2 className="logo">IMDb</h2>
+        <h2 className="logo">
+          IMDb 🎬
+        </h2>
 
         <NavLink to="/" className="nav-link">
           Home
@@ -31,7 +33,10 @@ function Navbar({ onSearch }) {
           onChange={(e) => setSearchQuery(e.target.value)}
         />
 
-        <button onClick={() => onSearch(searchQuery)}>
+        <button
+          className="search-btn"
+          onClick={() => onSearch(searchQuery)}
+        >
           Search
         </button>
 

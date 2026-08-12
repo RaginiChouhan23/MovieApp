@@ -39,3 +39,51 @@
   line-height: 1.7;
   color: #ddd;
 }
+
+.movie-meta {
+  display: flex;
+  gap: 20px;
+  margin: 15px 0;
+  flex-wrap: wrap;
+}
+
+.movie-meta span {
+  font-size: 16px;
+  color: #ddd;
+}
+
+.genres {
+  margin-top: 10px;
+  color: #ddd;
+}
+
+.genres strong {
+  color: white;
+}
+
+
+/* 📱 Mobile Responsive */
+@media (max-width: 768px) {
+
+  .movie-details {
+    flex-direction: column;
+    margin: 20px;
+    padding: 20px;
+  }
+
+  .details-poster {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .details-info h1 {
+    font-size: 28px;
+  }
+
+  .movie-meta {
+    gap: 12px;
+  }
+
+}
